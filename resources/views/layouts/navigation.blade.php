@@ -88,6 +88,9 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-white hover:text-amber-500">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('lotteries.index')" :active="request()->routeIs('lotteries.index')" class="text-white hover:text-amber-500">
+                {{ __('Sorteos') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
