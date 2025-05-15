@@ -124,4 +124,4 @@ $this->call([
 
 ## 📄 Licencia
 
-Este proyecto es una prueba técnica para [https://www.inxaitcorp.com/](https://www.inxaitcorp.com/)
+Este proyecto es una prueba técnica para [https://www.inxaitcorp.com/](https://www.inxaitcorp.com/). El proyecto desplegado online puede ser visitado en [https://sorteos.ggaleanoguerra.tech/](https://sorteos.ggaleanoguerra.tech/)
