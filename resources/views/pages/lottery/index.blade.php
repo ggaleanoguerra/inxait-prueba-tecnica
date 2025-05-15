@@ -75,7 +75,7 @@
                                                     </button>
                                                 </a>
                                                 <a href="{{ route('lotteries.sorteo', $entity->id) }}"
-                                                    title="Realizar sorteo">
+                                                    title="Realizar sorteo" class="btn-sorteo">
                                                     <button
                                                         class="p-2 bg-transparent hover:bg-gray-800 text-gray-100 rounded transition duration-200">
                                                         <x-icons.random class="h-5 w-5" />
