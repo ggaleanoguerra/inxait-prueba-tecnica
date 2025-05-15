@@ -28,7 +28,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative h-auto md:h-screen bg-black flex items-center">
+    <section class="relative pt-16 md:pt-0 h-auto md:h-screen bg-black flex items-center">
         @include('partials.hero')
     </section>
 
