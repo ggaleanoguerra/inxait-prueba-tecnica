@@ -7,6 +7,16 @@ Este es un sistema web para gestionar sorteos de una compañía de autos. Permit
 
 ## 🛠️ Requisitos del sistema
 
+Para ejecutar este proyecto, asegúrate de que tu sistema cuente con un **servidor web** instalado (por ejemplo, **Apache**) para servir la aplicación correctamente.
+
+Además, deben estar habilitadas las siguientes **extensiones de PHP** para una instalación y funcionamiento exitoso:
+
+- `dom`
+- `gd`
+- `curl`
+- `zip`
+
+
 Para ejecutar el proyecto localmente en **Windows**, necesitas tener instalados:
 
 - **PHP >= 8.2**
