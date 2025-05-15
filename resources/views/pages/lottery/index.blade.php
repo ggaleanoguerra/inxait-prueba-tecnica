@@ -1,17 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center flex-wrap gap-2">
             <h2 class="font-playfair text-xl text-white leading-tight">
                 Gestión de <span class="text-amber-500 font-bold">sorteos</span>
             </h2>
 
-            {{-- Acciones: se envuelven y sin wrap interno --}}
             <div class="flex flex-wrap items-center gap-2">
                 <a href="{{ route('lotteries.participants.download.all') }}" target="_blank"
                     title="Exportar TODOS los participantes a Excel">
                     <button
-                        class="text-black text-xs sm:text-sm transition duration-200
-                                   flex items-center gap-1 whitespace-nowrap">
+                        class="text-black text-xs sm:text-sm flex items-center gap-1 whitespace-nowrap transition duration-200">
                         <x-icons.excel class="h-5 w-5" />
                         <span>Exportar TODOS los participantes</span>
                     </button>
@@ -19,8 +17,7 @@
 
                 <a href="{{ route('lotteries.create') }}" title="Crear sorteo">
                     <button
-                        class="text-black text-xs sm:text-sm transition duration-200
-                                   flex items-center gap-1 whitespace-nowrap">
+                        class="text-black text-xs sm:text-sm flex items-center gap-1 whitespace-nowrap transition duration-200">
                         <x-icons.edit class="h-5 w-5" />
                         <span>Crear sorteo</span>
                     </button>
@@ -32,30 +29,30 @@
     <div class="py-6">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @if ($entities->count())
-                <div class="bg-gray-900 border border-gray-800 overflow-hidden shadow-lg sm:rounded-lg">
-                    <div class="sm:overflow-x-auto table-responsive ">
-                        <table class="w-full text-sm text-left table-auto m-4">
+                <div class="bg-gray-900 border border-gray-800 shadow-lg sm:rounded-lg">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full table-auto text-sm text-left m-4">
                             <thead class="text-xs uppercase bg-gray-900 text-amber-500 border-b border-gray-800">
                                 <tr>
-                                    <th scope="col" class="px-2 py-2 sm:px-6 sm:py-4 font-medium">Nombre</th>
-                                    <th scope="col" class="px-2 py-2 sm:px-6 sm:py-4 font-medium">Descripción</th>
-                                    <th scope="col" class=" sm:table-cell px-6 py-4 font-medium text-right">
-                                        Acciones
-                                    </th>
+                                    <th class="px-2 py-2 sm:px-6 sm:py-4 font-medium">Nombre</th>
+                                    <th class="px-2 py-2 sm:px-6 sm:py-4 font-medium">Descripción</th>
+                                    <th class="px-6 py-4 font-medium text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($entities as $entity)
                                     <tr
                                         class="bg-gray-900 border-b border-gray-800 hover:bg-gray-800 transition duration-200">
-                                        <td class="px-2 py-2 sm:px-6 sm:py-4 font-medium text-gray-100">
+                                        <td
+                                            class="px-2 py-2 sm:px-6 sm:py-4 font-medium text-gray-100 whitespace-normal">
                                             {{ $entity->name }}
                                         </td>
-                                        <td class="px-2 py-2 sm:px-6 sm:py-4 font-medium text-gray-100">
+                                        <td
+                                            class="px-2 py-2 sm:px-6 sm:py-4 font-medium text-gray-100 whitespace-normal">
                                             {{ $entity->description }}
                                         </td>
-                                        <td class=" sm:table-cell px-6 py-4 text-right">
-                                            <div class="flex justify-end space-x-2">
+                                        <td class="px-6 py-4 text-right whitespace-nowrap">
+                                            <div class="flex flex-wrap justify-end gap-2">
                                                 <a href="{{ route('lotteries.edit', $entity->id) }}"
                                                     title="Editar sorteo">
                                                     <button
@@ -96,9 +93,9 @@
                                                         data-id="{{ $entity->id }}"
                                                         @if ($entity->active) checked @endif>
                                                     <div
-                                                        class="relative w-10 h-5 bg-gray-700 rounded-full transition-colors duration-200 ease-in-out peer-checked:bg-green-600">
+                                                        class="relative w-10 h-5 bg-gray-700 rounded-full peer-checked:bg-green-600 transition-colors">
                                                         <div
-                                                            class="absolute left-1 top-1 bg-white w-3.5 h-3.5 rounded-full transition-transform duration-200 ease-in-out peer-checked:translate-x-5 peer-checked:bg-green-200">
+                                                            class="absolute left-1 top-1 bg-white w-3.5 h-3.5 rounded-full transition-transform peer-checked:translate-x-5 peer-checked:bg-green-200">
                                                         </div>
                                                     </div>
                                                     <span class="ml-2 text-sm text-gray-300 select-none status-text">
