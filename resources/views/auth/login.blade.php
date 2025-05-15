@@ -40,11 +40,6 @@
                         </div>
 
                         <div class="flex items-center justify-between mt-6">
-                            @if (Route::has('password.request'))
-                                <a class="text-sm text-gray-300 hover:text-white focus:outline-none transition duration-200" href="{{ route('password.request') }}">
-                                    {{ __('Forgot your password?') }}
-                                </a>
-                            @endif
 
                             <button type="submit" class="inline-block px-6 py-2 bg-amber-500 text-black font-medium rounded hover:bg-amber-400 transition duration-200">
                                 {{ __('Log in') }}

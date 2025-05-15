@@ -15,6 +15,8 @@ Además, deben estar habilitadas las siguientes **extensiones de PHP** para una 
 - `gd`
 - `curl`
 - `zip`
+- `pgsql`
+- `mbstring`
 
 
 Para ejecutar el proyecto localmente en **Windows**, necesitas tener instalados:
